@@ -16,11 +16,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          Leetcode 题解 - 芦苇
+          面向对象的编程思想 - 芦苇
         
     </title>
 
-    <link rel="canonical" href="http://xinruzhang.github.io/2019/09/11/leetcode/">
+    <link rel="canonical" href="http://xinruzhang.github.io/2020/06/17/面向对象的编程思想/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -92,16 +92,18 @@
                     <div class="post-heading" style="padding-top: calc(15vh)">
                         <div class="tags">
                             
-                              <a class="tag" href="/tags/#leetcode" title="leetcode">leetcode</a>
+                              <a class="tag" href="/tags/#设计模式之美" title="设计模式之美">设计模式之美</a>
                             
-                              <a class="tag" href="/tags/#算法" title="算法">算法</a>
+                              <a class="tag" href="/tags/#面向对象" title="面向对象">面向对象</a>
+                            
+                              <a class="tag" href="/tags/#编程思想" title="编程思想">编程思想</a>
                             
                         </div>
-                        <h1>Leetcode 题解</h1>
+                        <h1>面向对象的编程思想</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by 芦苇 on
-                            2019-09-11
+                            2020-06-17
                         </span>
                     </div>
                 
@@ -191,110 +193,49 @@
                 col-lg-8 col-lg-offset-2
                 col-md-10 col-md-offset-1
                 post-container">
-                <h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p>做 leetcode 时，加上以下代码能够使时长和空间得到优化。(大多数情况)</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">std</span>::ios::sync_with_stdio(<span class="literal">false</span>); <span class="built_in">cin</span>.tie(<span class="literal">NULL</span>);</span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>编号</th>
-<th>题目</th>
-<th>时间</th>
-<th>空间</th>
-<th>语言</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td><a href="https://github.com/XinruZhang/blog/blob/master/leetcode/1_Two_Sum.md" target="_blank" rel="noopener">Tow Sum</a></td>
-<td>12 ms</td>
-<td>10.3 MB</td>
-<td>E</td>
-</tr>
-<tr>
-<td>2</td>
-<td><a href="https://github.com/XinruZhang/blog/blob/master/leetcode/2_Add_Two_Numbers.md" target="_blank" rel="noopener">Add Two Numbers</a></td>
-<td>40ms</td>
-<td>18.6 MB</td>
-<td>M</td>
-</tr>
-<tr>
-<td>3</td>
-<td><a href="https://github.com/XinruZhang/blog/blob/master/leetcode/3_Longest_Substring_Without_Repeating_Characters.md" target="_blank" rel="noopener">Longest Substring Without Repeating Characters</a></td>
-<td>最坏 O(n^2)</td>
-<td>O(1)</td>
-<td>M</td>
-</tr>
-<tr>
-<td>4</td>
-<td><a href="https://github.com/XinruZhang/blog/blob/master/leetcode/4_Median_of_Two_Sorted_Arrays.md" target="_blank" rel="noopener">Median of Two Sorted Arrays</a></td>
-<td></td>
-<td></td>
-<td>H</td>
-</tr>
-<tr>
-<td>6</td>
-<td><a href="https://github.com/XinruZhang/blog/blob/master/leetcode/6_ZigZag_Conversion.md" target="_blank" rel="noopener">ZigZag Conversion</a></td>
-<td>O(n)</td>
-<td>O(n)</td>
-<td>M</td>
-</tr>
-<tr>
-<td>7</td>
-<td><a href="https://github.com/XinruZhang/blog/blob/master/leetcode/7_Reverse_Integer.md" target="_blank" rel="noopener">Reverse Integer.md</a></td>
-<td></td>
-<td></td>
-<td>E</td>
-</tr>
-<tr>
-<td>8</td>
-<td><a href="https://github.com/XinruZhang/blog/blob/master/leetcode/8_String_to_Integer_atoi.md" target="_blank" rel="noopener">String to Integer (atoi)</a></td>
-<td></td>
-<td></td>
-<td>M</td>
-</tr>
-<tr>
-<td>9</td>
-<td><a href="https://github.com/XinruZhang/blog/blob/master/leetcode/9_Palindrome_Number.md" target="_blank" rel="noopener">Palindrome Number</a></td>
-<td></td>
-<td></td>
-<td>E</td>
-</tr>
-<tr>
-<td>75</td>
-<td><a href="https://github.com/XinruZhang/blog/blob/master/leetcode/75_Sort_Colors.md" target="_blank" rel="noopener">Sort Colors</a></td>
-<td>n/ nlogn</td>
-<td></td>
-<td>M</td>
-</tr>
-<tr>
-<td>1020</td>
-<td><a href="https://github.com/XinruZhang/blog/blob/master/leetcode/1020_Partition_Array_Into_Three_Parts_With_Equal_Sum.md" target="_blank" rel="noopener">Partition Array Into Three Parts With Equal Sum</a></td>
-<td>O(n)</td>
-<td></td>
-<td>E</td>
-</tr>
-<tr>
-<td>1023</td>
-<td><a href="https://github.com/XinruZhang/blog/blob/master/leetcode/1023_Binary_String_With_Substrings_Representing_1_To_N.md" target="_blank" rel="noopener">Binary String With Substrings Representing 1 To N</a></td>
-<td></td>
-<td></td>
-<td>M</td>
-</tr>
-</tbody>
-</table>
+                <h2 id="1-面向对象编程与面向对象语言"><a href="#1-面向对象编程与面向对象语言" class="headerlink" title="1. 面向对象编程与面向对象语言"></a>1. 面向对象编程与面向对象语言</h2><ul>
+<li><strong>面向对象编程</strong>是一种编程范式或编程风格。它以类或对象作为组织代码的基本单元，并将封装、抽象、继承、多态四个特性，作为代码设计和实现的基石 。</li>
+<li><strong>面向对象编程语言</strong>是支持类或对象的语法机制，并有现成的语法机制，能方便地实现面向对象编程四大特性（封装、抽象、继承、多态）的编程语言。</li>
+</ul>
+<hr>
+<h2 id="2-面向对象的四大特性"><a href="#2-面向对象的四大特性" class="headerlink" title="2. 面向对象的四大特性"></a>2. 面向对象的四大特性</h2><ul>
+<li>封装(Encapsulation)</li>
+<li>继承(Inheritance)</li>
+<li>抽象(Abstraction)</li>
+<li>多态(Polymorphism)</li>
+</ul>
+<h3 id="2-1-封装-Encapsulation"><a href="#2-1-封装-Encapsulation" class="headerlink" title="2.1 封装(Encapsulation)"></a>2.1 封装(Encapsulation)</h3><p><strong>What</strong>：限制对象的数据与方法的访问。<br><strong>Why</strong>：1. 保护数据不被随意修改；2. 接口有限，提高类的易用性。<br><strong>How</strong>：C++ 和 Java 的 public、protected 和 private 关键字为成员变量和成员函数提供了访问权限控制。</p>
+<p><img src="/images/class_access_controll.png" alt="class access control"></p>
+<h3 id="2-2-继承-Inheritance"><a href="#2-2-继承-Inheritance" class="headerlink" title="2.2 继承(Inheritance)"></a>2.2 继承(Inheritance)</h3><p><strong>What</strong>：表示类之间的 is-a 关系。<br><strong>Why</strong>：1. 代码复用；2. 反应真实世界之间类的关系，在设计上有一种美感。<br><strong>How</strong>：需要语言提供特殊的语法机制。<br><strong>缺点</strong>：继承层级太多，代码的可读性会严重下降。</p>
+<h3 id="2-4-抽象-Abstraction"><a href="#2-4-抽象-Abstraction" class="headerlink" title="2.4 抽象(Abstraction)"></a>2.4 抽象(Abstraction)</h3><p><strong>What</strong>：隐藏方法的具体实现。<br><strong>Why</strong>：通过抽象来避免过多关注实现细节，在设计与实现时只需考虑统一抽象层级的逻辑关系。<br><strong>How</strong>：通过语言提供的接口类或抽象类来实现。</p>
 <blockquote>
-<p>题目参考 <a href="https://github.com/XinruZhang/leetcode-1" target="_blank" rel="noopener">haoel/leetcode</a></p>
+<p>抽象这个概念是一个非常通用的设计思想，并不单单用在面向对象编程中，也可以用来指导架构设计等。而且这个特性也并不需要编程语言提供特殊的语法机制来支持，只需要提供“函数”这一非常基础的语法机制，就可以实现抽象特性。所以，它没有很强的“特异性”，有时候并不被看作面向对象编程的特性之一。</p>
+</blockquote>
+<h3 id="2-4-多态-Polymorphism"><a href="#2-4-多态-Polymorphism" class="headerlink" title="2.4 多态(Polymorphism)"></a>2.4 多态(Polymorphism)</h3><p><strong>What</strong>：子类可以替代父类，在代码运行过程中，调用子类的方法。<br><strong>Why</strong>：提高代码的可扩展性和可复用性。<br><strong>How</strong>：需要编程语言提供三个语法机制：</p>
+<ul>
+<li>支持继承</li>
+<li>支持父类对象可以引用子类对象</li>
+<li>支持子类可以重写（override）父类方法</li>
+</ul>
+<p>除了“继承+方法重写”这种方式外，还可以用“接口”或者“Duck-Typing” 语法。</p>
+<h4 id="接口实现"><a href="#接口实现" class="headerlink" title="接口实现"></a>接口实现</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Iterator</span> </span>&#123;</span><br><span class="line">  <span class="function">String <span class="title">hasNext</span><span class="params">()</span></span>;</span><br><span class="line">  <span class="function">String <span class="title">next</span><span class="params">()</span></span>;</span><br><span class="line">  <span class="function">String <span class="title">remove</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Array</span> <span class="keyword">implements</span> <span class="title">Iterator</span> </span>&#123;</span><br><span class="line">  <span class="keyword">private</span> String[] data;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> String <span class="title">hasNext</span><span class="params">()</span> </span>&#123; ... &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> String <span class="title">next</span><span class="params">()</span> </span>&#123; ... &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> String <span class="title">remove</span><span class="params">()</span> </span>&#123; ... &#125;</span><br><span class="line">  <span class="comment">//...省略其他方法...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LinkedList</span> <span class="keyword">implements</span> <span class="title">Iterator</span> </span>&#123;</span><br><span class="line">  <span class="keyword">private</span> LinkedListNode head;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> String <span class="title">hasNext</span><span class="params">()</span> </span>&#123; ... &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> String <span class="title">next</span><span class="params">()</span> </span>&#123; ... &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> String <span class="title">remove</span><span class="params">()</span> </span>&#123; ... &#125;</span><br><span class="line">  <span class="comment">//...省略其他方法... </span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">(Iterator iterator)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (iterator.hasNext()) &#123;</span><br><span class="line">      System.out.println(iterator.next());</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    Iterator arrayIterator = <span class="keyword">new</span> Array();</span><br><span class="line">    print(arrayIterator);</span><br><span class="line">    </span><br><span class="line">    Iterator linkedListIterator = <span class="keyword">new</span> LinkedList();</span><br><span class="line">    print(linkedListIterator);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Duck-Typing-语法实现"><a href="#Duck-Typing-语法实现" class="headerlink" title="Duck-Typing 语法实现"></a>Duck-Typing 语法实现</h4><blockquote>
+<p><strong>Duck-Typing</strong><br>一个对象的语义，不是由继承自特定类型或者实现特定的接口，而是由“当前方法和属性的集合”决定。这个概念的名字来源于由詹姆斯·惠特科姆·莱利提出的鸭子测试，“鸭子测试”可以这样表述：</p>
+<p>“当看到一只鸟走起来像鸭子、游泳起来像鸭子、叫起来也像鸭子，那么这只鸟就可以被称为鸭子。”</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Logger</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">record</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(“I write a log into file.”)</span><br><span class="line">        </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DB</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">record</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(“I insert data into db. ”)</span><br><span class="line">        </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test</span><span class="params">(recorder)</span>:</span></span><br><span class="line">    recorder.record()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">demo</span><span class="params">()</span>:</span></span><br><span class="line">    logger = Logger()</span><br><span class="line">    db = DB()</span><br><span class="line">    test(logger)</span><br><span class="line">    test(db)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>说明：本文是 <a href="https://time.geekbang.org/column/article/161114" target="_blank" rel="noopener">【 理论二：封装、抽象、继承、多态分别可以解决哪些编程问题？ | 王争·设计模式之美 | 极客时间 】</a> 的学习总结</p>
 </blockquote>
 
                 <hr>
                 <!-- Pager -->
                 <ul class="pager">
                     
-                        <li class="previous">
-                            <a href="/2020/06/17/面向对象的编程思想/" data-toggle="tooltip" data-placement="top" title="面向对象的编程思想">&larr; Previous Post</a>
-                        </li>
                     
+                        <li class="next">
+                            <a href="/2019/09/11/leetcode/" data-toggle="tooltip" data-placement="top" title="Leetcode 题解">Next Post &rarr;</a>
+                        </li>
                     
                 </ul>
 
@@ -318,9 +259,11 @@
                     <h5><a href="/tags/">文章标签</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/leetcode" title="leetcode">leetcode</a>
+                          <a class="tag" href="/tags/设计模式之美" title="设计模式之美">设计模式之美</a>
                         
-                          <a class="tag" href="/tags/算法" title="算法">算法</a>
+                          <a class="tag" href="/tags/面向对象" title="面向对象">面向对象</a>
+                        
+                          <a class="tag" href="/tags/编程思想" title="编程思想">编程思想</a>
                         
                     </div>
                 </section>
