@@ -12,8 +12,8 @@
     <link rel="shortcut icon" href="/img/avatar_1.png">
     <link rel="bookmark" type="image/x-icon" href="/img/avatar_1.png">
     <!-- Place this tag in your head or just before your close body tag. -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <link rel="stylesheet" href="/css/gitalk.css">
+    <script async defer src="/js/buttons.js"></script>
     <title>
         
           面向对象的编程思想 - 芦苇
@@ -26,8 +26,9 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 
     <!-- Custom CSS --> 
-    <link rel="stylesheet" href="/css/beantech.min.css">
-    
+    <!-- <link rel="stylesheet" href="/css/beantech.min.css">-->
+    <link rel="stylesheet" href="/css/beantech.css">
+
     <!-- Pygments Highlight CSS -->
     <link rel="stylesheet" href="/css/highlight.css">
 
@@ -469,7 +470,24 @@
     <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
 <!-- Image to hack wechat -->
 <img src="http://xinruzhang.github.io/img/icon_wechat.png" width="0" height="0" />
-<!-- Migrate from head to bottom, no longer block render and still work --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<!-- Migrate from head to bottom, no longer block render and still work --><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="custom_mathjax_source">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
 
 </body>
 
