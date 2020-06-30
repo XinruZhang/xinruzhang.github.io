@@ -1,5 +1,4 @@
 var toc = document.getElementById('toc')
-
 if (toc != null) {
 	window.addEventListener("scroll", scrollcatelogHandler);
 	var tocPosition = toc.offsetTop;
