@@ -17,11 +17,11 @@
     <script async defer src="/js/xinru.js"></script>
     <title>
         
-          Leetcode 题解 - 芦苇
+          C/C++ 的变量在内存中的表示 - 芦苇
         
     </title>
 
-    <link rel="canonical" href="http://xinruzhang.github.io/2019/09/11/leetcode/">
+    <link rel="canonical" href="http://xinruzhang.github.io/2020/07/06/C-C-的变量在内存中的表示/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -94,16 +94,12 @@
                     <div class="post-heading" style="padding-top: calc(10vw)">
                         <div class="tags">
                             
-                              <a class="tag" href="/tags/leetcode" title="leetcode">leetcode</a>
-                            
-                              <a class="tag" href="/tags/算法" title="算法">算法</a>
-                            
                         </div>
-                        <h1>Leetcode 题解</h1>
+                        <h1>C/C++ 的变量在内存中的表示</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by 芦苇 on
-                            2019-09-11
+                            2020-07-06
                         </span>
                     </div>
                 
@@ -193,112 +189,112 @@
                 col-lg-8 col-lg-offset-2
                 col-md-10 col-md-offset-1
                 post-container">
-                <h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p>做 leetcode 时，加上以下代码能够使时长和空间得到优化。(大多数情况)</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">std</span>::ios::sync_with_stdio(<span class="literal">false</span>); <span class="built_in">cin</span>.tie(<span class="literal">NULL</span>);</span><br></pre></td></tr></table></figure>
+                <h1 id="C-C-的变量在内存中的表示"><a href="#C-C-的变量在内存中的表示" class="headerlink" title="C/C++ 的变量在内存中的表示"></a>C/C++ 的变量在内存中的表示</h1><p><strong>阅读概要：</strong></p>
+<ol>
+<li>char</li>
+<li>short, int 与 long</li>
+<li>float 与 double</li>
+<li>数据类型转换时，内存中发生了什么</li>
+</ol>
+<p>不同的数据类型与其所占有的内存大小</p>
 <div class="table-container">
 <table>
 <thead>
 <tr>
-<th>编号</th>
-<th>题目</th>
-<th>时间</th>
-<th>空间</th>
-<th>语言</th>
+<th style="text-align:center">数据类型</th>
+<th style="text-align:center">内存大小</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td><a href="https://github.com/XinruZhang/blog/blob/master/leetcode/1_Two_Sum.md" target="_blank" rel="noopener">Tow Sum</a></td>
-<td>12 ms</td>
-<td>10.3 MB</td>
-<td>E</td>
+<td style="text-align:center">char</td>
+<td style="text-align:center">1 byte</td>
 </tr>
 <tr>
-<td>2</td>
-<td><a href="https://github.com/XinruZhang/blog/blob/master/leetcode/2_Add_Two_Numbers.md" target="_blank" rel="noopener">Add Two Numbers</a></td>
-<td>40ms</td>
-<td>18.6 MB</td>
-<td>M</td>
+<td style="text-align:center">short</td>
+<td style="text-align:center">2 bytes</td>
 </tr>
 <tr>
-<td>3</td>
-<td><a href="https://github.com/XinruZhang/blog/blob/master/leetcode/3_Longest_Substring_Without_Repeating_Characters.md" target="_blank" rel="noopener">Longest Substring Without Repeating Characters</a></td>
-<td>最坏 O(n^2)</td>
-<td>O(1)</td>
-<td>M</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">4 bytes</td>
 </tr>
 <tr>
-<td>4</td>
-<td><a href="https://github.com/XinruZhang/blog/blob/master/leetcode/4_Median_of_Two_Sorted_Arrays.md" target="_blank" rel="noopener">Median of Two Sorted Arrays</a></td>
-<td></td>
-<td></td>
-<td>H</td>
+<td style="text-align:center">long</td>
+<td style="text-align:center">4 bytes</td>
 </tr>
 <tr>
-<td>6</td>
-<td><a href="https://github.com/XinruZhang/blog/blob/master/leetcode/6_ZigZag_Conversion.md" target="_blank" rel="noopener">ZigZag Conversion</a></td>
-<td>O(n)</td>
-<td>O(n)</td>
-<td>M</td>
+<td style="text-align:center">float</td>
+<td style="text-align:center">4 bytes</td>
 </tr>
 <tr>
-<td>7</td>
-<td><a href="https://github.com/XinruZhang/blog/blob/master/leetcode/7_Reverse_Integer.md" target="_blank" rel="noopener">Reverse Integer.md</a></td>
-<td></td>
-<td></td>
-<td>E</td>
-</tr>
-<tr>
-<td>8</td>
-<td><a href="https://github.com/XinruZhang/blog/blob/master/leetcode/8_String_to_Integer_atoi.md" target="_blank" rel="noopener">String to Integer (atoi)</a></td>
-<td></td>
-<td></td>
-<td>M</td>
-</tr>
-<tr>
-<td>9</td>
-<td><a href="https://github.com/XinruZhang/blog/blob/master/leetcode/9_Palindrome_Number.md" target="_blank" rel="noopener">Palindrome Number</a></td>
-<td></td>
-<td></td>
-<td>E</td>
-</tr>
-<tr>
-<td>75</td>
-<td><a href="https://github.com/XinruZhang/blog/blob/master/leetcode/75_Sort_Colors.md" target="_blank" rel="noopener">Sort Colors</a></td>
-<td>n/ nlogn</td>
-<td></td>
-<td>M</td>
-</tr>
-<tr>
-<td>1020</td>
-<td><a href="https://github.com/XinruZhang/blog/blob/master/leetcode/1020_Partition_Array_Into_Three_Parts_With_Equal_Sum.md" target="_blank" rel="noopener">Partition Array Into Three Parts With Equal Sum</a></td>
-<td>O(n)</td>
-<td></td>
-<td>E</td>
-</tr>
-<tr>
-<td>1023</td>
-<td><a href="https://github.com/XinruZhang/blog/blob/master/leetcode/1023_Binary_String_With_Substrings_Representing_1_To_N.md" target="_blank" rel="noopener">Binary String With Substrings Representing 1 To N</a></td>
-<td></td>
-<td></td>
-<td>M</td>
+<td style="text-align:center">double</td>
+<td style="text-align:center">8 bytes</td>
 </tr>
 </tbody>
 </table>
 </div>
-<blockquote>
-<p>题目参考 <a href="https://github.com/XinruZhang/leetcode-1" target="_blank" rel="noopener">haoel/leetcode</a></p>
+<p>1 byte = 8 bits<br>1 bit 中文称为 1 位，是计算机表示数据的最小单位，可以表示 0 或 1 两个不同数值。</p>
+<h3 id="1-char"><a href="#1-char" class="headerlink" title="1. char"></a>1. char</h3><p>1 byte = 8 bits 如图所示，每个方块代表 1 位，8 个小方块的排列一共有 $2^8 = 256$  种可能性，这也是 ASCII 码表大小为 256 的原因。<br><img src="/images/1594056111570.png" alt="Alt text"></p>
+<p>几个特殊符号的编码：</p>
+<ul>
+<li><code>&#39;0&#39;</code> - 48</li>
+<li><code>&#39;A&#39;</code> - 65</li>
+<li><code>&#39;a&#39;</code> - 97</li>
+</ul>
+<p><code>A</code> - $64 = 2^6 + 2^0$，在内存中的样子如下图所示<br><img src="/images/1593979651805.png" alt="Alt text"></p>
+<h3 id="2-short-int-long-等有符号数"><a href="#2-short-int-long-等有符号数" class="headerlink" title="2. short, int, long 等有符号数"></a>2. short, int, long 等有符号数</h3><p>以 short 为例， 2 bytes = 16 bits，$2^{16}$ 种可能。由于有符号，去掉 1 位，最大可以表示 $2^{15}-1$，最小可以到 $-2^{15}$。</p>
+<p>要在内存中表示有符号数，必须要掌握三个概念：<strong>原码</strong>、<strong>反码</strong>和<strong>补码</strong>。</p>
+<p>在介绍这三个概念的具体含义之前，我们先看一个 short 类型的 <strong>+7</strong> 在内存中怎么表示（最高位表示符号位，0为正，1为负）：<br><img src="/images/1593979473184.png" alt="Alt text"></p>
+<p>我们直接将 +7 的符号位置为 1，得到 -7 的表示：<br><img src="/images/1593979936694.png" alt="Alt text"></p>
+<p>但是如此一来， $(+7)+(-7)=-14$<br><img src="/images/1593980131853.png" alt="Alt text"></p>
+<p>这显然是很不合理的。我们的目标是使得计算机在内存中操作 $(+7)+(-7)$ 时，得到的结果为 0。即如图所示，找到一个 $?$ 表示 $-7$，使得 $? + (+7) $ 得到所有位都为 0：<br><img src="/images/1593980372162.png" alt="Alt text"></p>
+<p>我们很难一下子找到一个  $?$  使得其与 $+7$ 相加得到全零位。但是我们可以快速找到一个 $s$ 使得 $s + (+7)$ 的每一位均为 $1$ —— 将 $+7$ 按位取反来表示 $s$ 即可。</p>
+<p>得到 $s$ 后，我们用 $s+ 1$ 表示 $?$，从而，$? + (+7) = 1+s+(+7)$ 的每一位均为 $0$。</p>
+<p><img src="/images/1593981008276.png" alt="Alt text"></p>
+<p>我们将 $s$ 称为<strong>反码</strong>，$?$ 为<strong>补码</strong>，原本的表示即为<strong>原码</strong>。计算机的内存中有符号数字的表示均采取“补码”。</p>
+<p>总结一下，一个数的“补码”的规则为：</p>
+<ul>
+<li>正数与 $0$ 的补码是自己。</li>
+<li>负数的补码是其对应正数<strong>按位取反再加 1</strong>。</li>
+</ul>
+<h3 id="3-float-与-double"><a href="#3-float-与-double" class="headerlink" title="3. float 与 double"></a>3. float 与 double</h3><p><img src="/images/1594054612102.png" alt="Alt text"></p>
+<p>如上图所示，表示的数字为 $(-1)^{sign}\times 1.demical_part \times 2^{\ exponential_part-127}$。其中，$demical_part$ 的每一位的含义如下图所示：<br><img src="/images/1594055219028.png" alt="Alt text"></p>
+<p>以浮点数 $7.0$ 的表示为例：<br>\begin{equation}<br>\begin{aligned}<br>7.0\ &amp;= 3.5 \times 2^1\<br>&amp;= 1.75 \times 2^2<br>\end{aligned}<br>\end{equation}</p>
+<p>其中</p>
+<script type="math/tex; mode=display">demical\_part = 0.75 =  \frac{1}{2} + \frac{1}{4} = 2^{-1} + 2^{-2}</script><script type="math/tex; mode=display">exponential\_part - 127 = 2 \Rightarrow exponential\_part = 129 = 2^{7}+2^{0}</script><p>因而，浮点数 $7.0$ 在内存中的表示如下图所示：<br><img src="/images/1594055910480.png" alt="Alt text"></p>
+<h3 id="4-数据类型转换时，内存中发生了什么"><a href="#4-数据类型转换时，内存中发生了什么" class="headerlink" title="4. 数据类型转换时，内存中发生了什么"></a>4. 数据类型转换时，内存中发生了什么</h3><blockquote>
+<p><strong>大端</strong>：高位在前，低位在后（符合人类阅读习惯）<br><strong>小端</strong>：低位在前，高位在后（符合计算机处理习惯）</p>
+<p>只有读取的时候，才必须区分字节序，其他情况都不用考虑</p>
 </blockquote>
+<h4 id="4-1-short-与-char"><a href="#4-1-short-与-char" class="headerlink" title="4.1 short 与 char"></a>4.1 short 与 char</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> ch = <span class="string">'A'</span>;</span><br><span class="line"><span class="keyword">short</span> s = ch;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; s &lt;&lt; <span class="built_in">endl</span>; <span class="comment">// 65</span></span><br></pre></td></tr></table></figure>
+<p><img src="/images/1594056506462.png" alt="Alt text"></p>
+<hr>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">short</span> s = <span class="number">65</span>;</span><br><span class="line"><span class="keyword">char</span> ch = s;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; ch &lt;&lt; <span class="built_in">endl</span>; <span class="comment">// A</span></span><br></pre></td></tr></table></figure>
+<p><img src="/images/1594056675109.png" alt="Alt text"></p>
+<h4 id="4-2-short-与-int"><a href="#4-2-short-与-int" class="headerlink" title="4.2 short 与 int"></a>4.2 short 与 int</h4><p>$s = 1033 = 2^{10} + 2^{3} + 2^{0}$<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">short</span> s = <span class="number">1033</span>;</span><br><span class="line"><span class="keyword">int</span> i = s;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; i &lt;&lt; <span class="built_in">endl</span>; <span class="comment">// 1033</span></span><br></pre></td></tr></table></figure></p>
+<p><img src="/images/1594057373188.png" alt="Alt text"></p>
+<hr>
+<p>$i = 8421378 = 2^{23} + 2^{15} + 2^{1}$<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">8421378</span>;</span><br><span class="line"><span class="keyword">short</span> s = i;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; s &lt;&lt; <span class="built_in">endl</span>; <span class="comment">// -32766</span></span><br></pre></td></tr></table></figure></p>
+<p>保留低 $16$ 位，得到 $s$ 的内存表示如图，short 中按照 “补码” 来对内存表示解码，而符号位为 $1$，因而对 $s$ 的每一位取反再加 $1$ 得到原码 $s’ = 32766$，因而 $s = -32766$<br><img src="/images/1594057878186.png" alt="Alt text"></p>
+<hr>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">short</span> s = <span class="number">-1</span>;</span><br><span class="line"><span class="keyword">int</span> i = s;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; i &lt;&lt; <span class="built_in">endl</span>; <span class="comment">// -1</span></span><br></pre></td></tr></table></figure>
+<p>用符号位补齐高位。<br><img src="/images/1594058052746.png" alt="Alt text"></p>
+<h4 id="4-3-int-与-float"><a href="#4-3-int-与-float" class="headerlink" title="4.3 int 与 float"></a>4.3 int 与 float</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">7</span>;</span><br><span class="line"><span class="keyword">float</span> f = i;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; f &lt;&lt; <span class="built_in">endl</span>; <span class="comment">// 7.0</span></span><br></pre></td></tr></table></figure>
+<p>这计算机会自动进行计算，float f 的内存长啥样，而不是直接复制 i 的内存到 f。</p>
+<hr>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">float</span> f = *(<span class="keyword">float</span>*)&amp;i;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; f &lt;&lt; <span class="built_in">endl</span>; <span class="comment">// 7.00649e-45</span></span><br></pre></td></tr></table></figure>
+<p>这个就是将 i 的内存按照 float 的方式解释，因而得到一个很小的小数。<br>$decimal_part = 2^{-21} + 2^{-23}$<br>$exponential_part = 2^{-127}$</p>
+<h4 id="4-4-short-与-float"><a href="#4-4-short-与-float" class="headerlink" title="4.4 short 与 float"></a>4.4 short 与 float</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> f = <span class="number">7.0</span>;</span><br><span class="line"><span class="keyword">short</span> s = *(<span class="keyword">short</span>*)&amp;f;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; s &lt;&lt; <span class="built_in">endl</span>; <span class="comment">// 小端机器为 0，大端机器为 16608 = pow(2,14) + pow(2,7) + pow(2,6) + pow(2,5)</span></span><br></pre></td></tr></table></figure>
+<p><img src="/images/1594059329091.png" alt="Alt text"></p>
 
                 <hr>
                 <!-- Pager -->
                 <ul class="pager">
                     
-                        <li class="previous">
-                            <a href="/2020/06/17/面向对象的编程思想/" data-toggle="tooltip" data-placement="top" title="面向对象的编程思想">&larr; Previous Post</a>
-                        </li>
                     
+                        <li class="next">
+                            <a href="/2020/07/02/一直找不到的是什么/" data-toggle="tooltip" data-placement="top" title="一直找不到的是什么">Next Post &rarr;</a>
+                        </li>
                     
                 </ul>
 
@@ -322,10 +318,6 @@
                     <h5><a href="/tags/">文章标签</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/leetcode" title="leetcode">leetcode</a>
-                        
-                          <a class="tag" href="/tags/算法" title="算法">算法</a>
-                        
                     </div>
                 </section>
                 

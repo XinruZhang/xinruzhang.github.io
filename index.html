@@ -191,6 +191,73 @@
 
 <div class="post-preview">
 
+    <a href="/2020/07/07/C-C-的变量在内存中的表示/">
+        <h2 class="post-title">
+            C/C++ 的变量在内存中的表示
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            C/C++ 的变量在内存中的表示阅读概要：
+
+char
+short, int 与 long
+float 与 double
+数据类型转换时，内存中发生了什么
+
+不同的数据类型与其所占有的内存大小
+
+
+
+
+数据类型
+内存大小
+
+
+
+
+char
+1 byte
+
+
+short
+2 bytes
+
+
+int
+4 bytes
+
+
+long
+4 bytes
+
+
+float
+4 bytes
+
+
+double
+......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by 芦苇 on
+            2020-07-07
+        </p>
+<!--        <div class="tags">-->
+<!--            -->
+<!--              <a style="border-radius: 5px;" href="/tags/c/c++" title="c/c++">c/c++</a>-->
+<!--            -->
+<!--        </div>-->
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
     <a href="/2020/06/17/面向对象的编程思想/">
         <h2 class="post-title">
             面向对象的编程思想
@@ -243,6 +310,7 @@
 
 
 
+
 编号
 题目
 时间
@@ -267,7 +335,7 @@ M
 
 
 3
-Longest Substring ......
+Longest Substring......
         </div>
     </a>
     
@@ -389,6 +457,10 @@ Longest Substring ......
     <ul>
       
         <li>
+          <a href="/2020/07/07/C-C-的变量在内存中的表示/">C/C++ 的变量在内存中的表示</a>
+        </li>
+      
+        <li>
           <a href="/2020/06/17/面向对象的编程思想/">面向对象的编程思想</a>
         </li>
       
@@ -404,7 +476,7 @@ Longest Substring ......
         
     <h5 class="sidebar-header">归档</h5>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a><span class="archive-list-count">1</span></li></ul>
     </div>
 
         <hr>
@@ -558,7 +630,23 @@ Longest Substring ......
     <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
 <!-- Image to hack wechat -->
 <img src="http://xinruzhang.github.io/img/icon_wechat.png" width="0" height="0" />
-<!-- Migrate from head to bottom, no longer block render and still work --><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config("");
 </script>
@@ -576,7 +664,6 @@ Longest Substring ......
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->
-
 </body>
 
 </html>
